@@ -1,5 +1,17 @@
 # Project 1: dbt-Style Governed Transformation Layer on Snowflake
 
+## Why this project
+Sales and inventory transformation logic lived entirely inside Power BI's
+Power Query layer — steps embedded in individual `.pbix` files, no version
+control, no automated tests, same calculations rebuilt by hand across
+multiple dashboards. Errors surfaced only after a bad number had already
+shipped to a live report.
+
+This project pilots a governed alternative: a dbt-based transformation layer
+on Snowflake — version-controlled, tested SQL models any dashboard can
+query with confidence.
+
+
 ## What was actually built
 A working dbt project (`dbt_project.yml`, seeds, staging models, mart models,
 `schema.yml` tests) that replaces one existing Power Query pipeline — the
