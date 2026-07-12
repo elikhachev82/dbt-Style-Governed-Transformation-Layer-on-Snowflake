@@ -1,0 +1,48 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Raw seed/landing tables, standing in for the Salesforce + ERP extracts that feed this domain in production."
+    tables:
+      - name: raw_sales_orders
+      - name: raw_inventory
+
+models:
+  - name: stg_sales_orders
+    description: "One row per order line, lightly typed and renamed from the raw source. No aggregation or business logic."
+    columns:
+      - name: order_id
+        description: "Primary key of the order line."
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: region
+        tests:
+          - accepted_values:
+              values: ['West', 'South', 'Midwest', 'Northeast']
+      - name: channel
+        tests:
+          - accepted_values:
+              values: ['Direct', 'Distributor', 'OEM']
+      - name: quantity
+        tests:
+          - not_null
+      - name: sku
+        tests:
+          - not_null
+
+  - name: stg_inventory
+    description: "One row per SKU/warehouse combination, lightly typed and renamed from the raw source."
+    columns:
+      - name: sku
+        tests:
+          - not_null
+      - name: warehouse
+        tests:
+          - not_null
+      - name: on_hand_qty
+        tests:
+          - not_null

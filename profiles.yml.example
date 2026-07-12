@@ -1,0 +1,25 @@
+# This file normally lives at ~/.dbt/profiles.yml, NOT inside the project repo
+# (keep credentials out of version control).
+nikkiso_snowflake:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: TRANSFORMER
+      database: NIKKISO_ANALYTICS
+      warehouse: TRANSFORM_WH
+      schema: staging
+      threads: 4
+    prod:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      user: "{{ env_var('SNOWFLAKE_SERVICE_USER') }}"
+      private_key_path: "{{ env_var('SNOWFLAKE_PK_PATH') }}"
+      role: TRANSFORMER_PROD
+      database: NIKKISO_ANALYTICS
+      warehouse: TRANSFORM_WH_PROD
+      schema: marts
+      threads: 8

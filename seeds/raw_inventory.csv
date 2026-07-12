@@ -1,0 +1,11 @@
+sku,product_family,warehouse,on_hand_qty,unit_cost,reorder_point,lead_time_days,last_received_date
+CP-4400,Cryogenic Pump,Santa Ana DC,6,121000,4,90,2026-01-20
+CP-2200,Cryogenic Pump,Santa Ana DC,9,64000,6,75,2026-02-01
+IP-1000,Industrial Pump,Santa Ana DC,22,13500,15,45,2026-02-10
+IP-1500,Industrial Pump,Santa Ana DC,14,11800,10,45,2026-02-12
+SP-KIT-1,Spare Parts,Santa Ana DC,180,480,50,20,2026-02-15
+SP-KIT-2,Spare Parts,Santa Ana DC,95,300,40,20,2026-02-16
+SP-KIT-3,Spare Parts,Santa Ana DC,60,900,30,20,2026-02-18
+CP-4400,Cryogenic Pump,Moscow DC,3,121000,4,90,2026-01-10
+CP-2200,Cryogenic Pump,Moscow DC,5,64000,6,75,2026-01-25
+IP-1000,Industrial Pump,Moscow DC,11,13500,15,45,2026-02-05

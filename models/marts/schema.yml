@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: "One row per customer, conformed for use across sales and (future) support/service marts."
+    columns:
+      - name: customer_key
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_product
+    description: "One row per SKU, conformed across the sales and inventory domains."
+    columns:
+      - name: product_key
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_sales
+    description: "Grain: one row per order line. Source of truth for revenue, margin, and channel/rep performance reporting."
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_key
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customer')
+              field: customer_key
+      - name: product_key
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_product')
+              field: product_key
+      - name: extended_revenue
+        tests:
+          - not_null
+
+  - name: fct_inventory
+    description: "Grain: one row per SKU/warehouse. Source of truth for the $90M inventory-value dashboard and reorder-point alerting."
+    columns:
+      - name: sku
+        tests:
+          - not_null
+      - name: inventory_value
+        tests:
+          - not_null
+      - name: product_key
+        tests:
+          - relationships:
+              to: ref('dim_product')
+              field: product_key

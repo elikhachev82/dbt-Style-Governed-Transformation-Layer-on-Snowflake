@@ -1,0 +1,21 @@
+order_id,order_date,customer_id,customer_name,region,product_sku,product_family,channel,sales_rep,quantity,unit_price,unit_cost
+SO-10001,2026-01-05,C-001,Pacific LNG Terminal,West,CP-4400,Cryogenic Pump,Direct,J. Alvarez,2,185000,121000
+SO-10002,2026-01-07,C-002,Gulf Coast Energy,South,CP-2200,Cryogenic Pump,Distributor,M. Chen,1,96000,64000
+SO-10003,2026-01-09,C-003,Titan Industrial Supply,Midwest,IP-1000,Industrial Pump,Distributor,M. Chen,4,21000,13500
+SO-10004,2026-01-12,C-004,Nordic Marine Systems,Northeast,SP-KIT-3,Spare Parts,Direct,J. Alvarez,10,1800,900
+SO-10005,2026-01-15,C-005,Apex OEM Group,West,IP-1500,Industrial Pump,OEM,R. Patel,6,18500,11800
+SO-10006,2026-01-18,C-001,Pacific LNG Terminal,West,SP-KIT-1,Spare Parts,Direct,J. Alvarez,15,950,480
+SO-10007,2026-01-22,C-006,Great Lakes Processing,Midwest,CP-2200,Cryogenic Pump,Distributor,M. Chen,2,97500,64000
+SO-10008,2026-01-25,C-007,South Texas LNG,South,CP-4400,Cryogenic Pump,Direct,S. Okafor,1,189000,121000
+SO-10009,2026-01-29,C-008,Baltic Shipbuilders,Northeast,IP-1000,Industrial Pump,OEM,R. Patel,5,20800,13500
+SO-10010,2026-02-02,C-005,Apex OEM Group,West,IP-1500,Industrial Pump,OEM,R. Patel,8,18200,11800
+SO-10011,2026-02-05,C-003,Titan Industrial Supply,Midwest,SP-KIT-2,Spare Parts,Distributor,M. Chen,20,650,300
+SO-10012,2026-02-09,C-009,Rocky Mountain Gas,West,CP-2200,Cryogenic Pump,Direct,J. Alvarez,3,98500,64000
+SO-10013,2026-02-11,C-002,Gulf Coast Energy,South,IP-1000,Industrial Pump,Distributor,M. Chen,6,21500,13500
+SO-10014,2026-02-14,C-010,Northern Star Refining,Midwest,CP-4400,Cryogenic Pump,Direct,S. Okafor,1,192000,121000
+SO-10015,2026-02-18,C-004,Nordic Marine Systems,Northeast,SP-KIT-1,Spare Parts,Direct,J. Alvarez,12,975,480
+SO-10016,2026-02-21,C-007,South Texas LNG,South,IP-1500,Industrial Pump,OEM,R. Patel,7,18700,11800
+SO-10017,2026-02-25,C-008,Baltic Shipbuilders,Northeast,CP-2200,Cryogenic Pump,Distributor,M. Chen,2,99000,64000
+SO-10018,2026-03-01,C-006,Great Lakes Processing,Midwest,SP-KIT-3,Spare Parts,Direct,S. Okafor,9,1850,900
+SO-10019,2026-03-04,C-009,Rocky Mountain Gas,West,IP-1000,Industrial Pump,Distributor,M. Chen,5,21200,13500
+SO-10020,2026-03-08,C-010,Northern Star Refining,Midwest,IP-1500,Industrial Pump,OEM,R. Patel,4,18900,11800
